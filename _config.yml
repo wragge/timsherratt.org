@@ -1,0 +1,35 @@
+# Setup
+title:               tim.sherratt.org
+
+# About/contact
+author:
+  name:                Tim Sherratt
+  email:               "" # email here 
+  profile-pic:         img/profile-pic.jpg
+
+
+
+# Build settings
+markdown:            kramdown
+permalink:           /:title
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+
+# Default settings
+defaults:
+  -
+    scope:
+      path: "" 
+      type: "posts" 
+    values:
+      layout: "post"
+      author: Gabriel Utterson
+  -
+    scope:
+      path: "" 
+      type: "pages" 
+    values:
+      layout: "page"
+      

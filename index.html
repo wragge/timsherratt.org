@@ -1,0 +1,63 @@
+---
+layout: default
+title: Home
+type: Home 
+header: none 
+footer: none
+---
+
+<div class="home">
+
+  <div class="mini-intro">
+    <img class="avatar" src="{{site.author.profile-pic}}" alt="your-photo">
+    {% capture home-intro %}
+      {% include content/home-intro.md %}
+    {% endcapture %}
+    {{ home-intro | markdownify }}
+  </div>
+
+  <ul class="accordion-tabs">
+    <li class="tab-header-and-content">
+      <a href="#" class="tab-link">About me</a>
+      <div class="tab-content about-me">
+        {% capture home-about %}{% include content/home-about.md %}{% endcapture %}
+        {{ home-about | markdownify }}
+      </div>
+    </li>
+    <li class="tab-header-and-content">
+      <a href="#" class="tab-link">Writing</a>
+      <div class="tab-content featured-projects"> 
+        {% capture home-projects %}
+          {% include content/home-writing.md %}
+        {% endcapture %}
+        {{ home-projects | markdownify }}
+      </div>
+    </li>
+
+    <li class="tab-header-and-content">
+      <a href="#" class="tab-link">Research</a>
+      <div class="tab-content featured-projects"> 
+        {% capture home-projects %}
+          {% include content/home-projects.md %}
+        {% endcapture %}
+        {{ home-projects | markdownify }}
+      </div>
+    </li>
+    <li class="tab-header-and-content">
+      <a href="#" class="tab-link">Teaching</a>
+      <div class="tab-content featured-projects"> 
+        {% capture home-projects %}
+          {% include content/home-teaching.md %}
+        {% endcapture %}
+        {{ home-projects | markdownify }}
+      </div>
+    </li>
+  </ul>
+
+</div>
+
+
+
+
+
+
